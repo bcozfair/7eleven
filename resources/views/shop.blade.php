@@ -971,27 +971,71 @@
    
     <!-- Custom Styles -->
     <style>
-        .product-container {
-            display: flex;
-            flex-wrap: nowrap;
-            /* ป้องกันการห่อในกรณีที่เลื่อนซ้ายขวา */
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            gap: 10px;
-            -ms-overflow-style: none;
-            /* สำหรับ Internet Explorer 10+ */
-            scrollbar-width: none;
-            /* สำหรับ Firefox */
-            -webkit-overflow-scrolling: touch;
-            /* ให้เลื่อนด้วย scroll mouse */
-        }
+         .product-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* เลื่อนในแนวนอน */
+        overflow-y: hidden; /* ห้ามเลื่อนในแนวตั้ง */
+        scroll-behavior: smooth;
+        gap: 10px;
+        -ms-overflow-style: none; /* สำหรับ Internet Explorer 10+ */
+        scrollbar-width: thin; /* สำหรับ Firefox ใช้แถบเลื่อนแบบบาง */
+        -webkit-overflow-scrolling: touch; /* ให้เลื่อนด้วย scroll mouse */
+        width: 100%; /* กำหนดขนาดให้พอดีกับพื้นที่ */
+    }
 
-        .product-container::-webkit-scrollbar {
-            display: none;
-            /* ซ่อนแถบเลื่อนสำหรับ Chrome, Safari, และ Opera */
-        }
+    .product-container::-webkit-scrollbar {
+        height: 8px; /* ความสูงของแถบเลื่อนแนวนอน */
+    }
+
+    .product-container::-webkit-scrollbar-thumb {
+        background-color: orange; /* สีของแถบเลื่อน */
+        border-radius: 10px; /* มุมโค้งของแถบเลื่อน */
+        border: 2px solid #fff; /* ขอบของแถบเลื่อน */
+    }
+
+    .product-container::-webkit-scrollbar-thumb:hover {
+        background-color: #555; /* สีเมื่อวางเมาส์เหนือแถบเลื่อน */
+    }
+
+    .product-container::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /* สีพื้นหลังของแถบเลื่อน */
+        border-radius: 10px; /* มุมโค้งของแทร็ก */
+    } .product-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* เลื่อนในแนวนอน */
+        overflow-y: hidden; /* ห้ามเลื่อนในแนวตั้ง */
+        scroll-behavior: smooth;
+        gap: 10px;
+        -ms-overflow-style: none; /* สำหรับ Internet Explorer 10+ */
+        scrollbar-width: thin; /* สำหรับ Firefox ใช้แถบเลื่อนแบบบาง */
+        -webkit-overflow-scrolling: touch; /* ให้เลื่อนด้วย scroll mouse */
+        width: 100%; /* กำหนดขนาดให้พอดีกับพื้นที่ */
+    }
+
+    .product-container::-webkit-scrollbar {
+        height: 8px; /* ความสูงของแถบเลื่อนแนวนอน */
+    }
+
+    .product-container::-webkit-scrollbar-thumb {
+        background-color: orange; /* สีของแถบเลื่อน */
+        border-radius: 10px; /* มุมโค้งของแถบเลื่อน */
+        border: 2px solid #fff; /* ขอบของแถบเลื่อน */
+    }
+
+    .product-container::-webkit-scrollbar-thumb:hover {
+        background-color: #555; /* สีเมื่อวางเมาส์เหนือแถบเลื่อน */
+    }
+
+    .product-container::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /* สีพื้นหลังของแถบเลื่อน */
+        border-radius: 10px; /* มุมโค้งของแทร็ก */
+    }
+
 
         .product-card {
+            padding: 10px;
             flex: 0 0 auto;
             /* กำหนดให้การ์ดไม่ขยายเกินที่กำหนด */
             width: 100%;
