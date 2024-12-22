@@ -8,9 +8,12 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
             rel="stylesheet"
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Mitr:wght@200;300;400;500;600;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Mitr:wght@200;300;400;500;600;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
         <style>
             body {
                 font-family: "Prompt", serif;
@@ -49,7 +52,7 @@
                 tab-size: 4;
                 color: rgb(82, 82, 82);
                 font-family: "Prompt", serif;
-                font-size: 14px;
+                font-size: 12px;
                 box-sizing: inherit;
                 position: relative;
                 display: flex;
@@ -68,7 +71,7 @@
                 tab-size: 4;
                 color: rgb(82, 82, 82);
                 font-family: "Prompt", serif;
-                font-size: 14px;
+                font-size: 12px;
                 box-sizing: inherit;
                 position: fixed;
                 top: 0px;
@@ -112,11 +115,17 @@
                 height: 100px;
                 width: 100px;
             }
+
+            footer a {
+                font-size: 12px;
+                text-decoration: none;
+                color: whitesmoke;
+            }
         </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
-            <div class="container bg-white p-4">
+            <div class="container bg-white">
                 <!-- Logo -->
                 <a class="navbar-brand" href="{{ route('home') }}">
                     <img
@@ -285,13 +294,13 @@
                             <a
                                 href="https://www.7eleven.co.th/login"
                                 class="btn btn-outline-success m-2 fw-bold"
-                                style="font-size: 16px;"
+                                style="font-size: 14px"
                                 >เข้าสู่ระบบ</a
                             >
                             <a
                                 href="{{ route('register') }}"
                                 class="btn btn-success m-1 fw-bold"
-                                style="font-size: 16px;"
+                                style="font-size: 14px"
                                 >สมัครสมาชิก</a
                             >
                         </div>
@@ -306,7 +315,110 @@
             </div>
         </nav>
 
+        <footer class="bg-success text-white py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Left -->
+                    <div class="col-md-3 mb-4">
+                        <div class="footer-logo">
+                            <a href="{{ route('home') }}">
+                                <img
+                                    src="https://www.7eleven.co.th/static/imgs/Logo_Footer.svg?timestamp=1.6.22"
+                                    alt="Logo"
+                                    class="img-fluid"
+                                    style="background-color: #ffffff"
+                                />
+                            </a>
+                        </div>
+                    </div>
+        
+                    <!-- Footer Right -->
+                    <div class="col-md-9">
+                        <div class="row d-flex flex-wrap justify-content-between">
+                            <!-- About Us Column -->
+                            <div class="col-md-3 mb-4">
+                                <h5>เกี่ยวกับเรา</h5>
+                                <ul class="list-unstyled">
+                                    <li><a href="https://www.cpall.co.th/" target="_blank">รู้จักซีพี ออลล์</a></li>
+                                    <li><a href="https://job.cpall.co.th/v2/Default.aspx" target="_blank">ร่วมงานกับเรา</a></li>
+                                    <li><a href="https://www.cpall.co.th/store-business-partner/" target="_blank">ร่วมธุรกิจ7-Eleven</a></li>
+                                    <li><a href="https://www.cpall.co.th/news/" target="_blank">ข่าวและกิจกรรม</a></li>
+                                    <li><a href="https://www.7eleven.co.th/cookie">นโยบายการใช้คุกกี้ (Cookies Policy)</a></li>
+                                    <li><a href="https://www.7eleven.co.th/privacy-notice">การแจ้งการประมวลผลข้อมูลส่วนบุคคลของสมาชิก (Privacy Notice)</a></li>
+                                    <li><a href="https://www.7eleven.co.th/term-and-condition-allmember">ข้อกำหนดและเงื่อนไขสมาชิก ALL member</a></li>
+                                </ul>
+                            </div>
+        
+                            <!-- Help Column -->
+                            <div class="col-md-3 mb-4">
+                                <h5>ช่วยเหลือ</h5>
+                                <ul class="list-unstyled">
+                                    <li><a href="https://www.7eleven.co.th/about/faq">คำถามที่พบบ่อย</a></li>
+                                    <li><a href="tel:028267744">คอลเซ็นเตอร์ 02-826-7744</a></li>
+                                    <li><a href="tel:028267777">บริการสมาชิก 02-826-7777</a></li>
+                                    <li><a href="https://www.7eleven.co.th/contact-us">ติดต่อเรา</a></li>
+                                </ul>
+                            </div>
+        
+                            <!-- Follow Us Column -->
+                            <div class="col-md-3 mb-4">
+                                <h5>ติดตามเรา</h5>
+                                <ul class="list-unstyled d-flex">
+                                    <li class="mr-3"><a href="https://www.facebook.com/7ElevenThailand/"><img src="https://www.7eleven.co.th/static/imgs/icons/icon-facebook.svg" alt="Facebook" /></a></li>
+                                    <li class="mr-3"><a href="https://twitter.com/7eleventhailand"><img src="https://www.7eleven.co.th/static/imgs/icons/icon-twitter.svg" alt="Twitter" /></a></li>
+                                    <li class="mr-3"><a href="https://www.instagram.com/7.eleventhailand/?hl=en"><img src="https://www.7eleven.co.th/static/imgs/icons/icon-instagram.svg" alt="Instagram" /></a></li>
+                                    <li class="mr-3"><a href="https://www.youtube.com/channel/UCpu3-NFPc8Fl0WIVsGdb3KA"><img src="https://www.7eleven.co.th/static/imgs/icons/icon-youtube.svg" alt="Youtube" /></a></li>
+                                    <li><a href="https://page.line.me/cpall"><img src="https://www.7eleven.co.th/static/imgs/icons/icon-line.svg" alt="Line" /></a></li>
+                                </ul>
+                            </div>
+        
+                            <!-- Subscribe Column -->
+                            <div class="col-md-3 mb-4">
+                                <h5>รับโปรโมชั่นและดีลพิเศษก่อนใคร</h5>
+                                <form class="form-subscribe">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" placeholder="ใส่อีเมล์ของคุณ" />
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit">เข้าร่วม</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+        
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <!-- App Download Column -->
+                            <div class="col-md-3">
+                                <h5>ดาวน์โหลดแอป 7-Eleven</h5>
+                                <div class="d-flex">
+                                    <div class="mr-2">
+                                        <a href="http://bit.ly/w7appSt" target="_blank"><img src="https://www.7eleven.co.th/static/imgs/footer/appstore.svg" alt="App Store" class="img-fluid" /></a>
+                                    </div>
+                                    <div class="mr-2">
+                                        <a href="http://bit.ly/w7appPl" target="_blank"><img src="https://www.7eleven.co.th/static/imgs/footer/googleplay.svg" alt="Google Play" class="img-fluid" /></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://appgallery.huawei.com/app/C101676101" target="_blank"><img src="https://www.7eleven.co.th/static/imgs/footer/huaweistore.svg" alt="Huawei Store" class="img-fluid" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>
-
