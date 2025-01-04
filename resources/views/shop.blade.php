@@ -1,272 +1,997 @@
-<x-theme title="หิวเมื่อไหร่ ก็แวะมา... 7-ELEVEN">
+<x-theme title="อาหารและเครื่องดื่ม 7-Eleven">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    {{-- slide banner --}}
+    <div class="hero-banner-tbu0cq-0 dPZmDC">
+        <div class="slider-fullwidth-sc-1etrns3-0 dBZNlS undefined">
+            <div class="slick-slider slick-initialized" dir="ltr"><button class="slick-arrow slick-prev"><img
+                        src="/static/imgs/components/slick-slider/arrow-left-circle.svg" alt=""></button>
+                <div class="slick-list">
+                    <div class="slick-track"
+                        style="width: 10080px; opacity: 1; transform: translate3d(-4320px, 0px, 0px);">
+                        <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                            style="width: 1440px;">
+                            <div><a href="/promotion/only/3473-allselect">
+                                    <div class="item"><img
+                                            src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/6ce3da4304354cd8ba96fc66f271b580.jpg">
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true"
+                            style="outline: none; width: 1440px;">
+                            <div><a>
+                                    <div class="item"><img
+                                            src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/148ac65bb4884f099973087e634df55f.jpg">
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true"
+                            style="outline: none; width: 1440px;">
+                            <div><a href="/promotion/only/3832-allsupreme">
+                                    <div class="item"><img
+                                            src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/18a0299e2f314a9a918745473f7de53a.jpg">
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div data-index="2" class="slick-slide slick-active slick-current is-active" tabindex="-1"
+                            aria-hidden="false" style="outline: none; width: 1440px;">
+                            <div><a href="/promotion/only/3473-allselect">
+                                    <div class="item"><img
+                                            src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/6ce3da4304354cd8ba96fc66f271b580.jpg">
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div data-index="3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                            style="width: 1440px;">
+                            <div><a>
+                                    <div class="item"><img
+                                            src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/148ac65bb4884f099973087e634df55f.jpg">
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div data-index="4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                            style="width: 1440px;">
+                            <div><a href="/promotion/only/3832-allsupreme">
+                                    <div class="item"><img
+                                            src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/18a0299e2f314a9a918745473f7de53a.jpg">
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"
+                            style="width: 1440px;">
+                            <div><a href="/promotion/only/3473-allselect">
+                                    <div class="item"><img
+                                            src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/6ce3da4304354cd8ba96fc66f271b580.jpg">
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div><button class="slick-arrow slick-next"><img
+                        src="/static/imgs/components/slick-slider/arrow-right-circle.svg" alt=""></button>
+                <ul class="slick-dots" style="display: block;">
+                    <li class=""><button>1</button></li>
+                    <li class=""><button>2</button></li>
+                    <li class="slick-active"><button>3</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="line"></div>
+    </div>
 
 
+    <!-- Product List อาหารและเบเกอรี่-->
+    <div class="section-body container">
+        <div class="header-sc-14g3y87-0 jsnzna">
+            <h2 class="section-header__title" style="margin-top: 15px">อาหารและเบเกอรี่</h2>
+        </div>
+        <div class="product-container">
+            @foreach ($foods as $food)
+                <div class="product-card">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="{{ $food->image }}" alt="ชื่อสินค้า">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="#">
+                            <h3 class="item-title">{{ $food->name }}</h3>
+                        </a>
+                        <p>{{ $food->description }}</p>
+                    </div>
+                    <!-- Wrap price and button in a container -->
+                    <div class="card-footer"
+                        style="display: flex; justify-content: space-between; align-items: center;">
+                        <button class="btns">ซื้อเลย</button>
+                        <h3 style="color: orange; margin: 0;">฿ {{ number_format($food->price, 2) }}</h3>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
+
+        <!-- Product List เครื่องดื่ม-->
+        <div class="section-body container" style="margin-bottom: 30px">
+            <div class="header-sc-14g3y87-0 jsnzna">
+                <h2 class="section-header__title" style="margin-top: 15px">เครื่องดื่ม</h2>
+            </div>
+
+            <div class="product-container">
+                <div class="product-card">
+                    <a href="/new-product/drink/3857-iced-matcha-latte">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/c46f0b8e0a6a496bb25a9dd39e69e57a.jpg"
+                                alt="มัทฉะลาเต้เย็น">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3857-iced-matcha-latte">
+                            <h3 class="item-title">มัทฉะลาเต้เย็น</h3>
+                        </a>
+                        <p>Iced Matcha Latte</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3856-iced-matcha-with-honey-lime">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/815c0507e27f475c9b5c22d72503cdbf.jpg"
+                                alt="มัทฉะน้ำผึ้งมะนาว">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3856-iced-matcha-with-honey-lime">
+                            <h3 class="item-title">มัทฉะน้ำผึ้งมะนาว</h3>
+                        </a>
+                        <p>Iced Matcha with Honey Lime</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3545-signature-toffy-coconut">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/d59b2790c2914e98af2cccaf0093041f.jpg"
+                                alt="ซิกเนเจอร์ ท็อฟฟี่ โคโคนัท">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3545-signature-toffy-coconut">
+                            <h3 class="item-title">ซิกเนเจอร์ ท็อฟฟี่ โคโคนัท</h3>
+                        </a>
+                        <p>Signature Toffy Coconut</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3546-signature-herbal-refresh">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/67d9869ed4e846118937c0a8bbc831cd.jpg"
+                                alt="ซิกเนเจอร์ เฮอร์บัล รีเฟรช">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3546-signature-herbal-refresh">
+                            <h3 class="item-title">ซิกเนเจอร์ เฮอร์บัล รีเฟรช</h3>
+                        </a>
+                        <p>Signature Herbal Refresh</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3549-cappucino">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/bc41f766a7ad48ff8cd2e26d3735ac0d.jpg"
+                                alt="คาปูชิโน่ร้อน">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3549-cappucino">
+                            <h3 class="item-title">คาปูชิโน่ร้อน</h3>
+                        </a>
+                        <p>Hot Cappuccino</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3544-hot-latte">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/159732546f4048f697cd5a5e6967592f.jpg"
+                                alt="ลาเต้ร้อน">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3544-hot-latte">
+                            <h3 class="item-title">ลาเต้ร้อน</h3>
+                        </a>
+                        <p>Hot Latte</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3543-latte-22oz">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/193b57948cd84da58f327502c421b1cc.jpg"
+                                alt="ลาเต้เย็น">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3543-latte-22oz">
+                            <h3 class="item-title">ลาเต้เย็น</h3>
+                        </a>
+                        <p>Iced Latte</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3542-latte-16oz">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/0d083bf9494c4bdd84ace35d5c4291d0.jpg"
+                                alt="ลาเต้เย็น">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3542-latte-16oz">
+                            <h3 class="item-title">ลาเต้เย็น</h3>
+                        </a>
+                        <p>Iced Latte</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3541-hot-espresso">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/6055acc7298d4908b72e80f666a7f792.jpg"
+                                alt="เอสเพรสโซ่ร้อน">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3541-hot-espresso">
+                            <h3 class="item-title">เอสเพรสโซ่ร้อน</h3>
+                        </a>
+                        <p>Hot Espresso</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3540-espresso-22oz">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/aaf0046229d14a68a5fc2905a38865d3.jpg"
+                                alt="เอสเพรสโซ่เย็น">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3540-espresso-22oz">
+                            <h3 class="item-title">เอสเพรสโซ่เย็น</h3>
+                        </a>
+                        <p>Iced Espresso</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3539-espresso-16oz">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/b89dbd23558f408cb26b2acca2bebc61.jpg"
+                                alt="เอสเพรสโซ่เย็น">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3539-espresso-16oz">
+                            <h3 class="item-title">เอสเพรสโซ่เย็น</h3>
+                        </a>
+                        <p>Iced Espresso</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3538-cappucino-22oz">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/e31b92c781e045afb78e6cc074495b48.jpg"
+                                alt="คาปูชิโน่เย็น">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3538-cappucino-22oz">
+                            <h3 class="item-title">คาปูชิโน่เย็น</h3>
+                        </a>
+                        <p>Iced Cappuccino</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3537-cappucino-16oz">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/e6a940aa74244b6a86174ce50e7d61eb.jpg"
+                                alt="คาปูชิโน่เย็น">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3537-cappucino-16oz">
+                            <h3 class="item-title">คาปูชิโน่เย็น</h3>
+                        </a>
+                        <p>Iced Cappuccino</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3536-americano-hot">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/cfdf5ff90e5c4c5886f0470146aec6a2.jpg"
+                                alt="อเมริกาโน่ร้อน">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3536-americano-hot">
+                            <h3 class="item-title">อเมริกาโน่ร้อน</h3>
+                        </a>
+                        <p>Hot Americano</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3534-americano-22oz">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/0fda0fa4708c40ac88232f4d1a755cf6.jpg"
+                                alt="อเมริกาโน่เย็น">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3534-americano-22oz">
+                            <h3 class="item-title">อเมริกาโน่เย็น</h3>
+                        </a>
+                        <p>Iced Americano</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/3533-americano-16oz">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/157e81dc9b2b4add9f7929a181dfe4fb.jpg"
+                                alt="อเมริกาโน่เย็น">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/3533-americano-16oz">
+                            <h3 class="item-title">อเมริกาโน่เย็น</h3>
+                        </a>
+                        <p>Iced Americano</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1015-coffee-signature">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/863bd0d6b7ad449d80f15c3fd3dbb8c5.jpg"
+                                alt="กาแฟร้อน ซิกเนเจอร์">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1015-coffee-signature">
+                            <h3 class="item-title">กาแฟร้อน ซิกเนเจอร์</h3>
+                        </a>
+                        <p>Coffee Signature</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1014-macchiato">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/ba49868e9d684e9bae3b21ad2f0f1fde.jpg"
+                                alt="มัคคิอาโต">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1014-macchiato">
+                            <h3 class="item-title">มัคคิอาโต</h3>
+                        </a>
+                        <p>Macchiato</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1013-honey-americano">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/5bd9a9bd36f6482088210dd2d1b2f801.jpg"
+                                alt="อเมริกาโน่ น้ำผึ้ง">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1013-honey-americano">
+                            <h3 class="item-title">อเมริกาโน่ น้ำผึ้ง</h3>
+                        </a>
+                        <p>Honey Americano</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1012-americano">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/228b0d0eddf640c2ab83aad6b14887d3.jpg"
+                                alt="อเมริกาโน่">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1012-americano">
+                            <h3 class="item-title">อเมริกาโน่</h3>
+                        </a>
+                        <p>Americano</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1011-cappuccino">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/852c6d5715894f008f2f799beb03c140.jpg"
+                                alt="คาปูชิโน่">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1011-cappuccino">
+                            <h3 class="item-title">คาปูชิโน่</h3>
+                        </a>
+                        <p>Cappuccino</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1010-latte">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/2ae809a1dd884115a848b0c063531b1e.jpg"
+                                alt="ลาเต้">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1010-latte">
+                            <h3 class="item-title">ลาเต้</h3>
+                        </a>
+                        <p>Latte</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1009-mocha">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/d9639bb09cd8467daa147fede639fe5c.jpg"
+                                alt="มอคค่า">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1009-mocha">
+                            <h3 class="item-title">มอคค่า</h3>
+                        </a>
+                        <p>Mocha</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1008-espresso">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/61091c98d28d4817b7eb866c2039f3a9.jpg"
+                                alt="เอสเพรสโซ่">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1008-espresso">
+                            <h3 class="item-title">เอสเพรสโซ่</h3>
+                        </a>
+                        <p>Espresso</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1006-chocolate">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/c740801521fc4c6885a31cbced444f06.jpg"
+                                alt="ช็อกโกแลต">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1006-chocolate">
+                            <h3 class="item-title">ช็อกโกแลต</h3>
+                        </a>
+                        <p>Chocolate</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1005-fresh-milk">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/11da6103886f4e919645dcea6f61277a.jpg"
+                                alt="นมสด">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1005-fresh-milk">
+                            <h3 class="item-title">นมสด</h3>
+                        </a>
+                        <p>Fresh Milk</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1004-sweety-pink">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/9d4d15052d754f66a443a9cdcca67ceb.jpg"
+                                alt="นมชมพู">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1004-sweety-pink">
+                            <h3 class="item-title">นมชมพู</h3>
+                        </a>
+                        <p>Sweety Pink</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1003-espresso-signature">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/ed41a8f890bb44639a2813e9d892f13d.jpg"
+                                alt="เอสเพรสโซ่ซิกเนเจอร์">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1003-espresso-signature">
+                            <h3 class="item-title">เอสเพรสโซ่ซิกเนเจอร์</h3>
+                        </a>
+                        <p>Espresso Signature</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1002-matcha-green-tea">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/775517fb742a459789cb99fbc5edf1e8.jpg"
+                                alt="ชาเขียวนมมัทฉะ">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1002-matcha-green-tea">
+                            <h3 class="item-title">ชาเขียวนมมัทฉะ</h3>
+                        </a>
+                        <p>Matcha Green Tea</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1001-chocalate-signature">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/4743845348a44f8fa60308770e4709aa.jpg"
+                                alt="ช็อกโกแลต ซิกเนเจอร์">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1001-chocalate-signature">
+                            <h3 class="item-title">ช็อกโกแลต ซิกเนเจอร์</h3>
+                        </a>
+                        <p>Chocalate Signature</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/1000-thai-milk-tea">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/20c4b8a5e62448599a7023b62be33305.jpg"
+                                alt="ชานม">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/1000-thai-milk-tea">
+                            <h3 class="item-title">ชานม</h3>
+                        </a>
+                        <p>Thai Milk Tea</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/999-lemon-tea">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/394acefee24a49038a1f3fe7452eeaa1.jpg"
+                                alt="ชามะนาว">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/999-lemon-tea">
+                            <h3 class="item-title">ชามะนาว</h3>
+                        </a>
+                        <p>Lemon Tea</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <a href="/new-product/drink/997-red-sour-soda">
+                        <div class="product-img">
+                            <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/product/de9768871f2c48ba933ae5737a1f5737.jpg"
+                                alt="แดงมะนาวโซดา">
+                        </div>
+                    </a>
+                    <div class="item-detail">
+                        <a href="/new-product/drink/997-red-sour-soda">
+                            <h3 class="item-title">แดงมะนาวโซดา</h3>
+                        </a>
+                        <p>Red Sour Soda</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Custom Styles -->
         <style>
-            .card:hover {
-                transform: scale(1.05);
+            .product-container {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                /* เลื่อนในแนวนอน */
+                overflow-y: hidden;
+                /* ห้ามเลื่อนในแนวตั้ง */
+                scroll-behavior: smooth;
+                gap: 20px;
+                -ms-overflow-style: none;
+                /* สำหรับ Internet Explorer 10+ */
+                scrollbar-width: thin;
+                /* สำหรับ Firefox ใช้แถบเลื่อนแบบบาง */
+                -webkit-overflow-scrolling: touch;
+                /* ให้เลื่อนด้วย scroll mouse */
+                width: 100%;
+                /* กำหนดขนาดให้พอดีกับพื้นที่ */
             }
 
-            .item-thumb img {
+            .product-container::-webkit-scrollbar {
+                height: 8px;
+                /* ความสูงของแถบเลื่อนแนวนอน */
+            }
+
+            .product-container::-webkit-scrollbar-thumb {
+                background-color: orange;
+                /* สีของแถบเลื่อน */
+                border-radius: 10px;
+                /* มุมโค้งของแถบเลื่อน */
+                border: 2px solid #fff;
+                /* ขอบของแถบเลื่อน */
+            }
+
+            .product-container::-webkit-scrollbar-thumb:hover {
+                background-color: #555;
+                /* สีเมื่อวางเมาส์เหนือแถบเลื่อน */
+            }
+
+            .product-container::-webkit-scrollbar-track {
+                background-color: #f1f1f1;
+                /* สีพื้นหลังของแถบเลื่อน */
+                border-radius: 10px;
+                /* มุมโค้งของแทร็ก */
+            }
+
+            .product-card {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                justify-content: space-between;
+                min-height: 100%;
+                flex: 0 0 auto;
+                /* กำหนดให้การ์ดไม่ขยายเกินที่กำหนด */
+                width: 100%;
+                /* ค่าเริ่มต้นเต็มหน้าจอ */
+                max-width: 250px;
+                /* จำกัดความกว้างสูงสุด */
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            }
+
+            .product-card:hover {
+                transform: scale(1.05);
+                background-color: green;
+                /* พื้นหลังสีเขียว */
+            }
+
+            .product-card:hover .item-title {
+                color: orange;
+                /* ตัวหนังสือ h3 เป็นสีส้ม */
+            }
+
+            .product-card:hover .item-detail p {
+                color: white;
+                /* ตัวหนังสือ p เป็นสีขาว */
+            }
+
+            .product-img img {
                 width: 100%;
                 height: auto;
-                border-radius: 5px;
-            }
-
-            .slick-arrow {
-                background: none;
-                border: none;
-            }
-
-            .slick-arrow img {
-                width: 30px;
-                height: 30px;
-            }
-
-            .carousel-control-prev,
-            .carousel-control-next {
-                top: 50%;
-                transform: translateY(-50%);
-                width: 50px;
-                height: 50px;
-                background-color: rgba(0, 0, 0, 0.5);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .carousel-control-prev {
-                left: 5%;
-            }
-
-            .carousel-control-next {
-                right: 5%;
-            }
-
-            .carousel-control-prev-icon,
-            .carousel-control-next-icon {
-                background-size: 20px 20px;
-            }
-
-            .card-title {
-                font-weight: bold;
-            }
-
-            .promotion-images {
-                display: flex;
-                gap: 10px;
-                overflow-x: hidden;
-                /* Hide the scrollbar */
-            }
-
-            .promotion-description {
-                margin-top: 10px;
-            }
-
-            .promotion-item {
-                flex-shrink: 0;
-                display: inline-block;
-                width: 100%;
-                animation: scrollAnimation 20s linear infinite;
-            }
-
-            /* Stop scrolling on hover */
-            .promotion-item:hover {
-                animation-play-state: paused;
-            }
-
-            /* Define animation for scrolling items */
-            @keyframes scrollAnimation {
-                0% {
-                    transform: translateX(0);
-                }
-
-                100% {
-                    transform: translateX(-100%);
-                }
-            }
-
-            /* Apply border-radius to images */
-            .promotion-images img {
                 border-radius: 8px;
             }
 
-            .carousel-indicators {
-                position: absolute;
-                bottom: 5px;
-                /* ระยะจากด้านล่าง */
-                left: 40%;
-                transform: translateX(-50%);
+            .item-title {
+                font-size: 1.4rem;
+                margin: 5px;
+                color: green;
+                /* สีเริ่มต้นของ title */
+            }
+
+            .item-detail {
+                flex-grow: 1;
+                /* ให้เนื้อหาขยายเต็มพื้นที่ */
+                margin-bottom: 10px;
+            }
+
+            .card-footer {
                 display: flex;
-                justify-content: center;
-                gap: 10px;
+                justify-content: flex-end;
+                /* จัดปุ่มไปขวา */
+                align-items: center;
             }
 
-            .carousel-indicators button:hover {
-                transform: scale(1.2);
-            }
-
-            .carousel-indicators button {
-                border-radius: 50%;
+            .btns {
+                background-color: #ff6600;
+                color: white;
+                width: 100px;
+                max-height: 80%;
+                font-weight: bold;
+                padding: 10px 20px;
                 border: none;
+                border-radius: 20px;
+                cursor: pointer;
             }
 
-            .carousel-indicators .active {
-                background-color: green;
-                /* สีพื้นหลังสำหรับจุดที่ active */
+            .btns:hover {
+                background-color: #ffffff;
+                color: green;
+                font-weight: bold;
+            }
+
+            .item-detail p {
+                font-size: 1.1rem;
+                margin: 0 5px 5px;
+                color: rgb(30, 30, 30);
+                /* สีเริ่มต้นของ p */
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+
+                /* สำหรับแท็บเล็ต */
+                .product-container {
+                    gap: 8px;
+                    /* ลดช่องว่างระหว่างการ์ด */
+                }
+
+                .product-card {
+                    width: 80%;
+                    /* ให้การ์ดมีขนาด 80% ของหน้าจอ */
+                }
+
+                .item-title {
+                    font-size: 1.2rem;
+                    /* ลดขนาดตัวหนังสือ */
+                }
+
+                .item-detail p {
+                    font-size: 1rem;
+                    /* ลดขนาดตัวหนังสือ */
+                }
+            }
+
+            @media (max-width: 576px) {
+
+                /* สำหรับมือถือ */
+                .product-container {
+                    gap: 5px;
+                    /* ลดช่องว่างอีก */
+                }
+
+                .product-card {
+                    width: 80%;
+                    /* ให้การ์ดเต็มหน้าจอ */
+                }
+
+                .item-title {
+                    font-size: 1rem;
+                    /* ลดขนาดตัวหนังสืออีก */
+                }
+
+                .item-detail p {
+                    font-size: 0.9rem;
+                    /* ลดขนาดตัวหนังสืออีก */
+                }
             }
         </style>
-
-    </head>
-
-    <body>
-        <div class="row gx-0 min-vh-100">
-            <div class="row gx-0 min-vh-100">
-
-                {{-- Banner --}}
-                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                    <!-- Indicators -->
-                    <div class="carousel-indicators">
-                        <button style="width: 12px; height: 12px;" type="button" data-bs-target="#carouselExample"
-                            data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button style="width: 12px; height: 12px;" type="button" data-bs-target="#carouselExample"
-                            data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button style="width: 12px; height: 12px;" type="button" data-bs-target="#carouselExample"
-                            data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button style="width: 12px; height: 12px;" type="button" data-bs-target="#carouselExample"
-                            data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button style="width: 12px; height: 12px;" type="button" data-bs-target="#carouselExample"
-                            data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        <!-- เพิ่ม indicator ตามจำนวนสไลด์ -->
-                    </div>
-
-                    <!-- Slides -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="https://www.7eleven.co.th/promotion/tmw/2227-tmw">
-                                <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/da06632bb2864a4596aee53c5b055052.jpg"
-                                    class="d-block w-100" alt="Slide 1">
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="https://www.7eleven.co.th/campaign-privilege/campaign/3925-luckydraw">
-                                <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/77e66e3f41304228a483ae91d65dfaf8.jpg"
-                                    class="d-block w-100" alt="Slide 2">
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="https://7eleventh.page.link/R7U5">
-                                <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/54913738fed44c57b80ba61522376581.jpg"
-                                    class="d-block w-100" alt="Slide 3">
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="https://7eleventh.page.link/R7U5">
-                                <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/ba52c174ad4348ffacf60c272206070a.jpg"
-                                    class="d-block w-100" alt="Slide 3">
-                            </a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="https://7eleventh.page.link/R7U5">
-                                <img src="https://7elevenweb.s3.ap-southeast-1.amazonaws.com/banner/c8d673a9a0824e559b9969fc705ce28b.jpg"
-                                    class="d-block w-100" alt="Slide 3">
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-
-                <div class="container my-5">
-                    <h1 class="text-center mb-4">Product List</h1>
-            
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-                        @foreach ($foods as $food)
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="{{ $food->image }}" class="card-img-top" alt="{{ $food->name }}">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ $food->name }}</h5>
-                                        <p class="card-text">{{ $food->description }}</p>
-                                        <p class="text-primary fw-bold">${{ number_format($food->price, 2) }}</p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <button class="btn btn-primary w-100">Add to Cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-            
-                </div>
-
-
-            </div>
-            </div>
-                
-
-
-
-                <style>
-                    .uniform-img {
-                        height: 100px;
-                        /* ตั้งค่าความสูงที่ต้องการ */
-                        object-fit: contain;
-                        /* ปรับขนาดรูปภาพให้คงอัตราส่วนและไม่บิดเบี้ยว */
-                    }
-                </style>
-
-            </div>
-        </div>
-
+        {{-- slide Product --}}
         <script>
-            // Auto-scroll for the carousels
-            const carousel1 = new bootstrap.Carousel(document.getElementById('promotion-carousel-1'), {
-                interval: 3000, // Set the speed of auto scroll (3000ms = 3 seconds)
-                ride: 'carousel'
-            });
+            // เลือก .product-container ทั้งหมด
+            let sliders = document.querySelectorAll(".product-container");
 
-            const carousel2 = new bootstrap.Carousel(document.getElementById('promotion-carousel-2'), {
-                interval: 3000,
-                ride: 'carousel'
-            });
+            sliders.forEach((slider) => {
+                let isMouseDown = false;
+                let startX, scrollLeft;
 
-            // Pause carousel on hover
-            document.getElementById('promotion-carousel-1').addEventListener('mouseover', () => {
-                carousel1.pause();
-            });
-            document.getElementById('promotion-carousel-1').addEventListener('mouseout', () => {
-                carousel1.cycle();
-            });
+                // สำหรับการลากด้วย mouse
+                slider.addEventListener("mousedown", (e) => {
+                    isMouseDown = true;
+                    startX = e.pageX - slider.offsetLeft;
+                    scrollLeft = slider.scrollLeft;
+                });
 
-            document.getElementById('promotion-carousel-2').addEventListener('mouseover', () => {
-                carousel2.pause();
-            });
-            document.getElementById('promotion-carousel-2').addEventListener('mouseout', () => {
-                carousel2.cycle();
+                slider.addEventListener("mouseleave", () => {
+                    isMouseDown = false;
+                });
+
+                slider.addEventListener("mouseup", () => {
+                    isMouseDown = false;
+                });
+
+                slider.addEventListener("mousemove", (e) => {
+                    if (!isMouseDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - slider.offsetLeft;
+                    const walk = (x - startX) * 2; // ปรับความเร็วในการเลื่อน
+                    slider.scrollLeft = scrollLeft - walk;
+                });
+
+                // เพิ่มการรองรับ scroll mouse
+                slider.addEventListener('wheel', (e) => {
+                    if (e.deltaY !== 0) {
+                        slider.scrollLeft += e.deltaY; // ใช้ scroll ของ mouse เพื่อเลื่อน
+                        e.preventDefault(); // ป้องกันการ scroll แนวตั้ง
+                    }
+                });
+
+                // การเลื่อนอัตโนมัติ (ไม่จำเป็นสามารถลบได้หากไม่ต้องการ)
+                setInterval(() => {
+                    slider.scrollLeft += 1;
+                }, 30); // ปรับความเร็วการเลื่อน
             });
         </script>
+        {{-- slide Animation --}}
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const slickTrack = document.querySelector(".slick-track");
+                const slides = document.querySelectorAll(".slick-slide:not(.slick-cloned)");
+                const slickDots = document.querySelectorAll(".slick-dots li");
+                const slickPrev = document.querySelector(".slick-prev");
+                const slickNext = document.querySelector(".slick-next");
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+                let currentIndex = 0;
+                let slideWidth = getSlideWidth(); // กำหนดความกว้างเริ่มต้นของสไลด์
+                const totalSlides = slides.length;
 
-    </body>
+                // ฟังก์ชันสำหรับคำนวณความกว้างของสไลด์
+                function getSlideWidth() {
+                    return document.querySelector(".slick-list").clientWidth; // ใช้ความกว้างของ container
+                }
 
-    </html>
+                // ฟังก์ชันอัปเดตตำแหน่งของ track และ active dot
+                function slideAnimation() {
+                    const newPosition = -currentIndex * slideWidth;
+                    slickTrack.style.transition = "transform 0.5s ease-in-out";
+                    slickTrack.style.transform = `translate3d(${newPosition}px, 0, 0)`;
+                    updateActiveDot();
+                }
+
+                // ฟังก์ชันอัปเดต dot
+                function updateActiveDot() {
+                    slickDots.forEach((dot, index) => {
+                        if (index === currentIndex) {
+                            dot.classList.add("slick-active");
+                        } else {
+                            dot.classList.remove("slick-active");
+                        }
+                    });
+                }
+
+                // ฟังก์ชันเลื่อนไปยังสไลด์ถัดไป
+                function goToNextSlide() {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    slideAnimation();
+                }
+
+                // ฟังก์ชันเลื่อนไปยังสไลด์ก่อนหน้า
+                function goToPrevSlide() {
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    slideAnimation();
+                }
+
+                // ฟังก์ชันอัปเดตขนาดของสไลด์เมื่อหน้าจอเปลี่ยน
+                function updateSlideSize() {
+                    slideWidth = getSlideWidth();
+                    slides.forEach(slide => {
+                        slide.style.width = `${slideWidth}px`; // ปรับความกว้างของแต่ละสไลด์
+                    });
+                    slickTrack.style.width = `${totalSlides * slideWidth}px`; // ปรับความกว้างรวมของ track
+                    slideAnimation(); // อัปเดตตำแหน่งของ track
+                }
+
+                // เมื่อคลิกที่ dot
+                slickDots.forEach((dot, index) => {
+                    dot.addEventListener("click", function() {
+                        currentIndex = index;
+                        slideAnimation();
+                    });
+                });
+
+                // เมื่อคลิกที่ลูกศรขวา
+                slickNext.addEventListener("click", goToNextSlide);
+
+                // เมื่อคลิกที่ลูกศรซ้าย
+                slickPrev.addEventListener("click", goToPrevSlide);
+
+                // ตั้งเวลาเลื่อนอัตโนมัติ
+                setInterval(goToNextSlide, 5000);
+
+                // อัปเดตขนาดของสไลด์เมื่อเปลี่ยนขนาดหน้าจอ
+                window.addEventListener("resize", updateSlideSize);
+
+                // เรียกฟังก์ชันอัปเดตขนาดสไลด์ตอนโหลดหน้า
+                updateSlideSize();
+            });
+        </script>
+        {{-- slide Responsive --}}
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const slickTrack = document.querySelector(".slick-track");
+                const slickList = document.querySelector(".slick-list");
+                const slides = document.querySelectorAll(".slick-slide");
+                const realSlides = document.querySelectorAll(".slick-slide:not(.slick-cloned)");
+                const slickDots = document.querySelectorAll(".slick-dots li");
+                const slickPrev = document.querySelector(".slick-prev");
+                const slickNext = document.querySelector(".slick-next");
+
+                let currentIndex = 0;
+                let slideWidth = getSlideWidth();
+                const totalSlides = realSlides.length;
+
+                // ฟังก์ชันสำหรับคำนวณความกว้างของสไลด์
+                function getSlideWidth() {
+                    return slickList.clientWidth; // ใช้ความกว้างของ container
+                }
+
+                // ฟังก์ชันอัปเดตตำแหน่งของ track และ active dot
+                function slideAnimation() {
+                    const newPosition = -currentIndex * slideWidth;
+                    slickTrack.style.transition = "transform 0.5s ease-in-out";
+                    slickTrack.style.transform = `translate3d(${newPosition}px, 0, 0)`;
+                    updateActiveDot();
+                }
+
+                // ฟังก์ชันอัปเดต dot
+                function updateActiveDot() {
+                    slickDots.forEach((dot, index) => {
+                        if (index === currentIndex) {
+                            dot.classList.add("slick-active");
+                        } else {
+                            dot.classList.remove("slick-active");
+                        }
+                    });
+                }
+
+                // ฟังก์ชันเลื่อนไปยังสไลด์ถัดไป
+                function goToNextSlide() {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    slideAnimation();
+                }
+
+                // ฟังก์ชันเลื่อนไปยังสไลด์ก่อนหน้า
+                function goToPrevSlide() {
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    slideAnimation();
+                }
+
+                // ฟังก์ชันอัปเดตขนาดของสไลด์และจัดการ clone
+                function updateSlideSize() {
+                    slideWidth = getSlideWidth();
+
+                    // ปรับขนาดของสไลด์ทั้งหมด (รวมถึง clone)
+                    slides.forEach((slide) => {
+                        slide.style.width = `${slideWidth}px`;
+                    });
+
+                    // ปรับขนาดและตำแหน่งของ track
+                    slickTrack.style.width = `${slides.length * slideWidth}px`;
+
+                    // อัปเดตตำแหน่งสไลด์
+                    slideAnimation();
+                }
+
+                // ฟังก์ชันซ่อน clone slides ที่ไม่เกี่ยวข้อง
+                function hideUnnecessaryClones() {
+                    slides.forEach((slide) => {
+                        if (slide.classList.contains("slick-cloned")) {
+                            slide.style.display = "none"; // ซ่อน clone ที่ไม่ต้องการ
+                        }
+                    });
+                }
+
+                // เมื่อคลิกที่ dot
+                slickDots.forEach((dot, index) => {
+                    dot.addEventListener("click", function() {
+                        currentIndex = index;
+                        slideAnimation();
+                    });
+                });
+
+                // เมื่อคลิกที่ลูกศรขวา
+                slickNext.addEventListener("click", goToNextSlide);
+
+                // เมื่อคลิกที่ลูกศรซ้าย
+                slickPrev.addEventListener("click", goToPrevSlide);
+
+                // ตั้งเวลาเลื่อนอัตโนมัติ
+                setInterval(goToNextSlide, 5000);
+
+                // อัปเดตขนาดของสไลด์และซ่อน clone เมื่อเปลี่ยนขนาดหน้าจอ
+                window.addEventListener("resize", updateSlideSize);
+
+                // เรียกฟังก์ชันตอนโหลดหน้า
+                updateSlideSize();
+                hideUnnecessaryClones();
+            });
+        </script>
 
 </x-theme>

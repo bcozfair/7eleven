@@ -435,7 +435,7 @@
         @media (max-width: 1023px) {
             .lphHRx .site-header-right {
                 padding-top: 25px;
-                background-image: url(static/imgs/menu/bg.jpg);
+                background-image: url(https://www.7eleven.co.th/static/imgs/menu/bg.jpg);
                 background-repeat: no-repeat;
                 background-size: 100% auto;
                 background-position: left top;
@@ -841,7 +841,7 @@
                 bottom: 0;
                 width: calc(100% + 30px);
                 height: 1px;
-                background-image: url("static/imgs/account/bg-dashed.svg");
+                background-image: url("https://www.7eleven.co.th/static/imgs/account/bg-dashed.svg");
                 background-repeat: repeat-x;
             }
         }
@@ -951,7 +951,7 @@
             bottom: 0;
             width: 100%;
             height: 1px;
-            background-image: url("static/imgs/account/bg-dashed.svg");
+            background-image: url("https://www.7eleven.co.th/static/imgs/account/bg-dashed.svg");
             background-repeat: repeat-x;
         }
 
@@ -1097,7 +1097,7 @@
                 bottom: 0;
                 width: calc(100% + 30px) !important;
                 height: 1px;
-                background-image: url("static/imgs/account/bg-dashed.svg");
+                background-image: url("https://www.7eleven.co.th/static/imgs/account/bg-dashed.svg");
                 background-repeat: repeat-x;
             }
 
@@ -1506,7 +1506,7 @@
             display: block;
             width: 46px;
             height: 46px;
-            background-image: url("static/imgs/header/avatar/avatar-bg.svg");
+            background-image: url("https://www.7eleven.co.th/static/imgs/header/avatar/avatar-bg.svg");
             background-repeat: no-repeat;
             background-position: 0 0;
             background-size: 100% auto;
@@ -1681,7 +1681,7 @@
             right: 4px;
             top: 3px;
             bottom: auto;
-            background-image: url("static/imgs/header/avatar/question.svg");
+            background-image: url("https://www.7eleven.co.th/static/imgs/header/avatar/question.svg");
             background-repeat: no-repeat;
             background-position: 0 0;
             background-size: 100% auto;
@@ -1712,7 +1712,7 @@
 
         .lphHRx .account-progress .progress-bar::after {
             content: "";
-            background-image: url("static/imgs/header/avatar/star.png");
+            background-image: url("https://www.7eleven.co.th/static/imgs/header/avatar/star.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: 100%;
@@ -3471,7 +3471,7 @@
             width: 100%;
             margin: 30px auto;
             height: 1px;
-            background-image: url("static/imgs/account/bg-dashed.svg");
+            background-image: url("https://www.7eleven.co.th/static/imgs/account/bg-dashed.svg");
             background-repeat: repeat-x;
         }
 
@@ -4505,7 +4505,7 @@
         .form .form-icon-block .form-icon-block-inner {
             width: 100%;
             padding-bottom: 80px;
-            background-image: url("static/imgs/register/shadow.png");
+            background-image: url("https://www.7eleven.co.th/static/imgs/register/shadow.png");
             background-repeat: no-repeat;
             background-position: center bottom;
         }
@@ -4886,7 +4886,7 @@
             top: 3px;
             width: 14px;
             height: 14px;
-            background-image: url("static/imgs/icons/icon-checked.svg");
+            background-image: url("https://www.7eleven.co.th/static/imgs/icons/icon-checked.svg");
             background-repeat: no-repeat;
             background-position: center center;
             background-color: #00a550;

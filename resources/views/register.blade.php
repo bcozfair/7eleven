@@ -4,7 +4,7 @@
         <!-- นำเข้า Bootstrap CDN -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    </head>    
+    </head>
 
     <body>
         <div class="container-fluid p-0">
@@ -120,17 +120,17 @@
                 function adjustBannerVisibility() {
                     var screenWidth = window.innerWidth;
                     var banner = document.querySelector('.custom-banner');
-            
+
                     if (screenWidth < 768) {
-                        banner.classList.add('d-none');  // ซ่อนเมื่อหน้าจอเล็กกว่า 768px
+                        banner.classList.add('d-none'); // ซ่อนเมื่อหน้าจอเล็กกว่า 768px
                     } else {
-                        banner.classList.remove('d-none');  // แสดงเมื่อหน้าจอใหญ่กว่า 768px
+                        banner.classList.remove('d-none'); // แสดงเมื่อหน้าจอใหญ่กว่า 768px
                     }
                 }
-            
+
                 // เรียกฟังก์ชัน adjustBannerVisibility เมื่อตรวจจับขนาดหน้าจอ
                 window.addEventListener('resize', adjustBannerVisibility);
-            
+
                 // เรียกใช้งานทันทีเมื่อโหลดหน้าเพจ
                 adjustBannerVisibility();
             </script>
