@@ -94,6 +94,30 @@ class FoodSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => 'ข้าวญี่ปุ่นผัดกระเทียม',
+                'description' => 'หอมกลิ่นเนยและ กระเทียม',
+                'price' => 25.00,
+                'image' => 'https://7elevenweb.s3.ap-southeast-1.amazonaws.com/985589ea85174a2291e9d70fb39b7017.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'ข้าวปลาผัดพริกสด',
+                'description' => 'ปรับโฉมใหม่ หอมพริก ใบมะกรูด อร่อยจัดจ้าน',
+                'price' => 45.00,
+                'image' => 'https://7elevenweb.s3.ap-southeast-1.amazonaws.com/92da3fa0fd4e44a48479ae7c6198c191.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'ข้าวกระเพราหมู',
+                'description' => 'หอมกลิ่นกระเพราและหมู',
+                'price' => 40.00,
+                'image' => 'https://7elevenweb.s3.ap-southeast-1.amazonaws.com/67a8b60d08e146b4bdeac1e5b8c5c9eb.jpg',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }

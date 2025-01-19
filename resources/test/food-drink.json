@@ -1,4 +1,3 @@
-// Food
 [
     {
         "title": "ไส้กรอก ต๊อกบอกกีชีส สูตรเผ็ดพ่นไฟ",
@@ -89,10 +88,13 @@
         "detail": "หอมกลิ่นกระเพราและหมู",
         "link": "/new-product/bakery/12-ข้าวกระเพราหมู",
         "image": "https://7elevenweb.s3.ap-southeast-1.amazonaws.com/67a8b60d08e146b4bdeac1e5b8c5c9eb.jpg"
-    }
-]
-//   Drink
-[
+    },
+
+
+
+
+
+
         {
             "title": "มัทฉะลาเต้เย็น",
             "link": "/new-product/drink/3857-iced-matcha-latte",
